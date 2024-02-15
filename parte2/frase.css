@@ -44,6 +44,7 @@ main {
   animation-name: fadeInMoveOut;
   animation-duration: 6s;
   animation-iteration-count: infinite;
+  margin-left: 5px;
 }
 
 @keyframes fadeInMoveOut {
@@ -63,7 +64,6 @@ main {
   70% {
     opacity: 0;
     transform: translateY(50px);
-    display: none;
   }
 }
 
