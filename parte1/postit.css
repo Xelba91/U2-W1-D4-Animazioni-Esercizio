@@ -1,0 +1,122 @@
+/* dimensione e font family */
+body {
+  font: 2rem "Indie Flower";
+  overflow-x: hidden;
+  background-color: #666;
+}
+
+section {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* aumento il font-size dell'h2 in section e gli do il grassetto */
+section h2 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+section div {
+  /* selezionato colore con colorZilla dal mockup e poi usato con cssgradient */
+  /* background-color: #f3f4c3; */
+
+  background: rgb(243, 244, 195);
+  background: linear-gradient(177deg, rgba(243, 244, 195, 1) 81%, rgba(186, 186, 161, 1) 100%);
+
+  padding: 2em;
+  margin: 0.7em;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  transform: rotate(-4deg);
+  transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-out;
+  opacity: 0;
+  animation: schiaccia 1s forwards;
+}
+/* applico ad ogni 2 figli del div */
+section div:nth-child(even) {
+  /* background-color: #bef4c8; */
+  background: rgb(189, 243, 199);
+  background: linear-gradient(177deg, rgba(189, 243, 199, 1) 81%, rgba(153, 178, 159, 1) 100%);
+  transform: rotate(4deg);
+}
+section div:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+section div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+section div:nth-child(3) {
+  /* background-color: #c4c5f1; */
+  background: rgb(197, 199, 243);
+  background: linear-gradient(177deg, rgba(197, 199, 243, 1) 81%, rgba(137, 138, 151, 1) 100%);
+  transform: rotate(-10deg);
+  animation-delay: 0.3s;
+}
+
+section div:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+section div:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+section div:nth-child(6) {
+  /* background-color: #c4c5f1; */
+  background: rgb(197, 199, 243);
+  background: linear-gradient(177deg, rgba(197, 199, 243, 1) 81%, rgba(137, 138, 151, 1) 100%);
+  transform: rotate(-10deg);
+  animation-delay: 0.6s;
+}
+
+section div:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+section div:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+section div:hover {
+  transform: scale(1.15);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  cursor: pointer;
+}
+
+@keyframes schiaccia {
+  0% {
+    opacity: 0;
+    transform: scale(10);
+  }
+  25% {
+    opacity: 0;
+    transform: scale(8);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(6);
+  }
+
+  55% {
+    opacity: 1;
+    transform: scale(4);
+  }
+
+  65% {
+    opacity: 1;
+    transform: scale(2);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
